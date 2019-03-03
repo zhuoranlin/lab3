@@ -10,7 +10,7 @@ if ($_GET["show"]=="all"){
 	$query = 'select * from stockList;';
 }
 if ($_GET["show"]=="stockcode"){
-	$query = 'select * from stockList where stockcode = $_GET["value"];';
+	$query = 'select * from stockList where stockcode ='.$_GET["value"].';';
 }
 if ($_GET["show"]=="category"){
 	$query = 'select * from stockList;';
