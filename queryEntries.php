@@ -6,7 +6,9 @@ mysqli_select_db($conn, 'h3523520') or die('Error! '. mysqli_error($conn));
 //Construct your SQL query here
 
 
-if ($_GET["show"]=="all"){
+print "<p>".$_GET["show"]."</p>";
+print "<p>".$_GET["value"]."</p>";
+if ($_GET["show"]==all){
 	$query = 'select * from stockList;';
 }
 else{
