@@ -11,9 +11,11 @@ if ($_GET["show"]=="all"){
 }
 if ($_GET["show"]=="stockcode"){
 	$query = 'select * from stockList where stockcode ='.$_GET["value"].';';
+	print "stockcode";
 }
 if ($_GET["show"]=="category"){
 	$query = 'select * from stockList;';
+	print "category";
 }
 
 //Execute SQL query
