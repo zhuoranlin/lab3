@@ -12,9 +12,9 @@ $query = "UPDATE stockList SET status = '$value' WHERE id = '$id';";
 
 //Execute SQL query
 $result = mysqli_query($conn, $query) or die('Error! '. mysql_error($conn));
-//while($row = mysqli_fetch_array($result)) {
-//        print "$row['status']";
-//}
+while($row = mysqli_fetch_array($result)) {
+        print "$row['status']";
+}
 
 mysqli_close($conn);
 
