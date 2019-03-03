@@ -7,13 +7,14 @@ mysqli_select_db($conn, 'h3523520') or die('Error! '. mysqli_error($conn));
 $value = $_GET['value'];
 $id = $_GET['id'];
 print $value;
+print $id;
 $query = "UPDATE stockList SET status = '$value' WHERE id = '$id';";
 
 //Execute SQL query
-$result = mysqli_query($conn, $query) or die('Error! '. mysql_error($conn));
-while($row = mysqli_fetch_array($result)) {
-        print "$row['status']";
-}
+//$result = mysqli_query($conn, $query) or die('Error! '. mysql_error($conn));
+//while($row = mysqli_fetch_array($result)) {
+//        print "$row['status']";
+//}
 
 mysqli_close($conn);
 
