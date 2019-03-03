@@ -10,6 +10,7 @@ print "<p>".$_GET["value"]."</p>";
 
 if ($_GET["show"]=="all"){
 	$query = 'select * from stockList;';
+	print "<p>".$_GET["show"]."</p>";
 }
 
 //Execute SQL query
