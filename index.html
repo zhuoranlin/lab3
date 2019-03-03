@@ -107,9 +107,11 @@
            elem.innerHTML = xmlhttp.responseText;
         }
       }
-      alert(newvalue);
+
       xmlhttp.open("GET","updateState.php?value="+newvalue+"&id="+itemID, true);
       xmlhttp.send();
+      alert(newvalue);
+      alert(id);
     }
 
 
