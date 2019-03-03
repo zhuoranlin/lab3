@@ -1,5 +1,5 @@
 <?php
-$value = $_GET['newvalue'];
-print "$value";
+$value = $_GET['value'];
+print $value;
 
 ?>
