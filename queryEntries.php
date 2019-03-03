@@ -10,8 +10,16 @@ print "<p>".$_GET["value"]."</p>";
 
 if ($_GET["show"]=="all"){
 	$query = 'select * from stockList;';
-	print "<p>".$_GET["show"]."</p>";
 }
+else if ($_GET["show"]=="stockcode"){
+	$query = 'select * from stockList where stockcode ='.$_GET["value"].';';
+	print "<p>stockCode</p>";
+}
+else {
+	$query = 'select * from stockList where category ='.$_GET["value"].';';
+	print "<p>category</p>";
+}
+
 
 //Execute SQL query
 $result = mysqli_query($conn, $query) or die('Error! '. mysql_error($conn));
