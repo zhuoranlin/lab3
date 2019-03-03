@@ -9,7 +9,7 @@ $query = 'select * from stockList';
 $result = mysqli_query($conn, $query) or die('Error! '. mysql_error($conn));
 while($row = mysqli_fetch_array($result)) {
         print "<div id=".$row['id'].">";
-        print "<span>".$row['status']."</span>";
+        print "<span>".$row['status']."</span><h3>".$row['stockname'].$row['category']"</h3><h5>".$row['stockcode'].$row['date']."</h5>";
         print "</div>";
 }
 ?>
