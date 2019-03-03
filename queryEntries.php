@@ -2,7 +2,7 @@
 //Connect to database
 $conn=mysqli_connect('sophia.cs.hku.hk', 'h3523520', 'FuDMbGLZ') or die('Error! '. mysqli_error($conn));
 //Select database
-mysqli_select_db($conn, 'stockList') or die('Error! '. mysqli_error($conn));
+mysqli_select_db($conn, 'h3523520') or die('Error! '. mysqli_error($conn));
 //Construct your SQL query here
 $query = 'select * from stockList';
 //Execute SQL query
