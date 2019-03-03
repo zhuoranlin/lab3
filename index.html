@@ -86,6 +86,31 @@
       document.getElementById("button_all").style.display = "block";
     }
 
+    function changeState(elem) {
+  		var oldValue = elem.innerHTML;
+  		var newvalue;
+  		var itemID = elem.parentNode.getAttribute('id');
+
+  		if (oldValue == 'RISE') {
+  			newvalue = 'FALL';
+  		} else {
+  			newvalue = 'RISE';
+  		}
+      var xmlhttp;
+      if (window.XMLHttpRequest){
+         xmlhttp = new XMLHttpRequest();
+      }else{
+         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      xmlhttp.onreadystatechange = function(){
+        if (xmlhttp.readyState == 4  && xmlhttp.status ==200){
+           elem.innerHTML = xmlhttp.responseText;
+        }
+      }
+      xmlhttp.open("GET","updateState.php?value="+newvalue, true);
+      xmlhttp.send();
+    }
+
 
 
 
