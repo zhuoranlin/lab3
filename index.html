@@ -40,7 +40,7 @@
            mesgs.innerHTML = xmlhttp.responseText;
         }
       }
-      xmlhttp.open("GET","queryEntries.php?show=stockcode", true);
+      xmlhttp.open("GET","queryEntries.php?show=all", true);
       xmlhttp.send();
       document.getElementById("button_all").style.display = "none";
     }
@@ -59,7 +59,7 @@
            mesgs.innerHTML = xmlhttp.responseText;
         }
       }
-      stockCode = document.getElementById("stockcode").value;
+      var stockCode = document.getElementById("stockcode").value;
       xmlhttp.open("GET","queryEntries.php?show=stockcode&value="+stockCode, true);
       document.getElementById("button_all").style.display = "block";
     }
@@ -78,7 +78,7 @@
       mesgs.innerHTML = xmlhttp.responseText;
         }
       }
-      category = document.getElementById("category").value;
+      var category = document.getElementById("category").value;
       xmlhttp.open("GET","queryEntries.php?show=category&value="+category, true);
       document.getElementById("button_all").style.display = "block";
     }
