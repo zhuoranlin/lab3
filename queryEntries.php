@@ -8,15 +8,12 @@ mysqli_select_db($conn, 'h3523520') or die('Error! '. mysqli_error($conn));
 
 if ($_GET["show"]=="all"){
 	$query = 'select * from stockList;';
-	print "<p>all</p>";
 }
 if ($_GET["show"]=="stockcode"){
 	$query = 'select * from stockList where stockcode ='.$_GET["value"].';';
-	print "<p>stockcode</p>";
 }
 if ($_GET["show"]=="category"){
-	$query = 'select * from stockList;';
-	print "<p>category</p>";
+	$query = 'select * from stockList where category ='.$_GET["value"].';';
 }
 
 //Execute SQL query
@@ -26,4 +23,6 @@ while($row = mysqli_fetch_array($result)) {
         print "<span>".$row['status']."</span><h3>".$row['stockname']." (".$row['category'].")</h3><h5>(".$row['stockcode'].") on ".$row['date']."</h5>";
         print "</div>";
 }
+
+mysqli_close($conn);
 ?>
