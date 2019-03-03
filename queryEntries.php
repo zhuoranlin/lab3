@@ -8,7 +8,16 @@ mysqli_select_db($conn, 'h3523520') or die('Error! '. mysqli_error($conn));
 print "<p>".$_GET["show"]."</p>";
 print "<p>".$_GET["value"]."</p>";
 
-$query = "SELECT * FROM stockList WHERE stockcode = '$_GET["value"]';";
+$s = $_GET["value"];
+if ($_GET["show"]=="all"){
+	$query = 'select * from stockList;';
+}
+if ($_GET["show"]=="stockcode"){
+	$query = "SELECT * FROM stockList WHERE stockcode = '$s';";
+}
+if ($_GET["show"]=="category"){
+	$query = "SELECT * FROM stockList WHERE category = '$s';";
+}
 
 //Execute SQL query
 $result = mysqli_query($conn, $query) or die('Error! '. mysql_error($conn));
