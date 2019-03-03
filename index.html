@@ -108,7 +108,7 @@
         }
       }
       alert(newvalue);
-      xmlhttp.open("GET","updateState.php?value="+newvalue, true);
+      xmlhttp.open("GET","updateState.php?value="+newvalue+"&id="+itemID, true);
       xmlhttp.send();
     }
 
