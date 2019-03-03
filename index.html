@@ -87,7 +87,6 @@
     }
 
     function changeState(elem) {
-      alert("hello");
   		var oldValue = elem.innerHTML;
   		var newvalue;
   		var itemID = elem.parentNode.getAttribute('id');
@@ -108,6 +107,7 @@
            elem.innerHTML = xmlhttp.responseText;
         }
       }
+      alert(newvalue);
       xmlhttp.open("GET","updateState.php?value="+newvalue, true);
       xmlhttp.send();
     }
