@@ -8,7 +8,7 @@ mysqli_select_db($conn, 'h3523520') or die('Error! '. mysqli_error($conn));
 print "<p>".$_GET["show"]."</p>";
 print "<p>".$_GET["value"]."</p>";
 
-$query = "SELECT * FROM stockList;";
+$query = "SELECT * FROM stockList s WHERE s.stockcode = GS;";
 
 //Execute SQL query
 $result = mysqli_query($conn, $query) or die('Error! '. mysql_error($conn));
