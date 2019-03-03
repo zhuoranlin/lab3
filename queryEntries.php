@@ -9,10 +9,10 @@ mysqli_select_db($conn, 'h3523520') or die('Error! '. mysqli_error($conn));
 if ($_GET["show"]=="all"){
 	$query = 'select * from stockList;';
 }
-if ($_GET["show"]=="stockcode"){
+else if ($_GET["show"]=="stockcode"){
 	$query = 'select * from stockList where stockcode ='.$_GET["value"].';';
 }
-if ($_GET["show"]=="category"){
+else
 	$query = 'select * from stockList where category ='.$_GET["value"].';';
 }
 
