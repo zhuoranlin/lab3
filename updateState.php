@@ -7,7 +7,6 @@ mysqli_select_db($conn, 'h3523520') or die('Error! '. mysqli_error($conn));
 $value = $_GET['value'];
 $id = $_GET['id'];
 print $value;
-print $id;
 $query = "UPDATE stockList SET status = '$value' WHERE id = '$id';";
 
 //Execute SQL query
