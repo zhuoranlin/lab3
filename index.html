@@ -27,6 +27,7 @@
 
     <script>
     function showAll(){
+      alert("hello");
       var xmlhttp;
       if (window.XMLHttpRequest){
          xmlhttp = new XMLHttpRequest();
@@ -60,7 +61,6 @@
         }
       }
       var stockCode = document.getElementById("stockcode").value;
-      alert(stockCode);
       xmlhttp.open("GET","queryEntries.php?show=stockcode&value="+stockCode, true);
       document.getElementById("button_all").style.display = "block";
     }
@@ -80,7 +80,6 @@
         }
       }
       var category = document.getElementById("category").value;
-      alert(category);
       xmlhttp.open("GET","queryEntries.php?show=category&value="+category, true);
       document.getElementById("button_all").style.display = "block";
     }
