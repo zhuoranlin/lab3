@@ -9,7 +9,7 @@ print "<p>".$_GET["show"]."</p>";
 print "<p>".$_GET["value"]."</p>";
 
 
-$query = 'select * from stockList;';
+$query = 'select * from stockList where stockcode = GS;';
 
 //Execute SQL query
 $result = mysqli_query($conn, $query) or die('Error! '. mysql_error($conn));
